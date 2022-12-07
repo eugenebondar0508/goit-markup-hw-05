@@ -114,8 +114,10 @@ img {
     
 }
 
-.contact-link:hover {
+.contact-link:hover,
+.icon:hover {
     color: var(--iris);
+    --color4: var(--iris);
 }
 
 .contact-link {
@@ -200,6 +202,7 @@ img {
     max-width: 1600px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.8), rgba(46, 47, 66, 0.8)), url(../images/tagline-bg.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -382,14 +385,14 @@ img {
 
 
 .item:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 24px;
 }
 
 .title-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 30px 0 0 0;
+    gap: 15px;
+    padding: 30px 0;
 }
 
 .team-item-text {
@@ -400,7 +403,6 @@ img {
     letter-spacing: 0.02em;
     --color3: var(--primary-text-color);
     margin-top: 0;
-    margin-bottom: 20px;
 }
 
 
@@ -439,8 +441,9 @@ img {
   
 .clients-list .link:hover,
 .clients-list .link:focus {
-    background-color: var(--iris);
-    --color3: #ffffff ;
+    background-color: #ffffff;
+    --color3: var(--iris) ;
+    border-color: var(--iris);
 }
 
 .footer {
@@ -520,11 +523,12 @@ img {
     letter-spacing: 0.04em;
     text-align: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: none;
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
-    cursor: pointer;
     color: var(--primary-bg-color);
     background-color: var(--iris);
     box-shadow: 1px 1px 1px 1px rgba(46, 47, 66, 0.16);
@@ -543,10 +547,15 @@ img {
     box-sizing: border-box;
     border-radius: 6px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+.card-link {
+    display: block;
+    text-decoration: none;
 }
 
-.gallery-card:hover,
-.gallery-card:focus {
+.card-link:hover,
+.card-link:focus {
     cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -578,6 +587,7 @@ img {
 }
 
 .gallery-card-title {
+    color: var(--navy-blue);
     margin-bottom: 8px;
     font-size: 20px;
     line-height: 1.2;
@@ -585,6 +595,7 @@ img {
     letter-spacing: 0.02em;
 }
 .gallery-card-text {
+    color: #434455;
     margin: 0;
     font-size: 16px;
     font-weight: 400;
